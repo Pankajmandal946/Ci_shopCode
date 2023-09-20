@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 // if (isset($_SESSION['hryS_user_id'])) {
 //   header("location: home.php");
 //   die;
@@ -121,7 +121,7 @@
   <!-- AdminLTE App -->
   <script src="theme/js/adminlte.min.js"></script>
 
-  <!-- <script>
+  <script>
     $(document).ready(function() {
       $(document).on('click', '#modify_password', function(e) {
         e.preventDefault();
@@ -250,7 +250,7 @@
         }
         if (username != "" && password != "") {
           $.ajax({
-            url: "controller/login.php",
+            url: "login",
             type: "POST",
             dataType: "json",
             async: false,
@@ -263,7 +263,8 @@
               'password': password
             }),
             success: function(response) {
-              window.location.href = "home.php";
+                console.log(response);
+            //   window.location.href = "home.php";
             },
             error: function(jqXHR, exception) {
               var msg = '';
@@ -308,7 +309,7 @@
       }
       return true;
     }
-  </script> -->
+  </script>
 
 </body>
 

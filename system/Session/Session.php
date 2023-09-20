@@ -917,7 +917,7 @@ class Session implements SessionInterface
             return;
         }
 
-        session_start(); // @codeCoverageIgnore
+        // session_start(); // @codeCoverageIgnore
     }
 
     /**
